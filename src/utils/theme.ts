@@ -5,6 +5,14 @@ const theme = extendTheme({
     heading: `'Oswald', sans-serif`,
     body: `'Oswald', sans-serif`,
   },
+  textStyles: {
+    h1: {
+      textTransform: 'uppercase',
+    },
+    h2: {
+      textTransform: 'uppercase',
+    },
+  },
   colors: {
     black: '#000000',
     white: '#FFFFFF',
@@ -13,6 +21,12 @@ const theme = extendTheme({
     cardBackground: '#EFEFEF',
     accentBackground: '#CCCCCC',
     test: 'green',
+  },
+  breakpoints: {
+    base: '0px',
+    sm: '320px',
+    md: '768px',
+    lg: '1280px',
   },
 });
 

@@ -1,12 +1,12 @@
-import { Box, Heading } from '@chakra-ui/react';
+import { HeroSection, RecomendationSection, SkillsSection } from 'sections';
 
 const App = () => {
   return (
-    <Box>
-      <Heading as="h1" size="4xl" color="test">
-        Hi
-      </Heading>
-    </Box>
+    <>
+      <HeroSection />
+      <SkillsSection />
+      <RecomendationSection />
+    </>
   );
 };
 
