@@ -1,3 +1,4 @@
+import { BurgerMenu } from 'components';
 import {
   HeroSection,
   ProjectsSection,
@@ -8,6 +9,7 @@ import {
 const App = () => {
   return (
     <>
+      <BurgerMenu />
       <HeroSection />
       <SkillsSection />
       <ProjectsSection />

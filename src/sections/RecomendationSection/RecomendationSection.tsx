@@ -2,7 +2,7 @@ import { Avatar, Box, Container, Heading, Text } from '@chakra-ui/react';
 import { SlUserFemale, SlUser } from 'react-icons/sl';
 import { Carousel } from 'components';
 import { Recomendation } from 'utils/types';
-import { RECOMENDATIONS } from 'utils';
+import { RECOMENDATIONS, SECTIONS } from 'utils';
 
 const RecomendationSection = () => {
   const renderItem = ({ gender, name, position, text }: Recomendation) => {
@@ -61,7 +61,7 @@ const RecomendationSection = () => {
     );
   };
   return (
-    <Box as="section" py={10} bg="background">
+    <Box as="section" py={10} bg="background" id={SECTIONS.recommendations}>
       <Container centerContent maxW="md" my={10}>
         <Heading
           as="h2"
