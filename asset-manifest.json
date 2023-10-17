@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.a53691e7.js",
+    "main.js": "/portfolio/static/js/main.36d4fcb3.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/just-water.png": "/portfolio/static/media/just-water.41c881a80eb38481181d.png",
     "static/media/main.png": "/portfolio/static/media/main.2cd6a9cbc228a79f0a46.png",
@@ -14,10 +14,10 @@
     "static/media/phonebook-book.png": "/portfolio/static/media/phonebook-book.c1337cb54bf495bee03f.png",
     "static/media/phonebook-form.png": "/portfolio/static/media/phonebook-form.bd4e49fd16c41a9e2fbd.png",
     "index.html": "/portfolio/index.html",
-    "main.a53691e7.js.map": "/portfolio/static/js/main.a53691e7.js.map",
+    "main.36d4fcb3.js.map": "/portfolio/static/js/main.36d4fcb3.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.a53691e7.js"
+    "static/js/main.36d4fcb3.js"
   ]
 }
