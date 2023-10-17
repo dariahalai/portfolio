@@ -53,14 +53,14 @@ const skillsArray = [
 
 const SkillsSection = () => {
   return (
-    <Box as="section" py={10} bg="cardBackground">
+    <Box as="section" py={10} bg="background">
       <Container centerContent maxW="xl" my={10}>
         <Heading
           as="h2"
           size={{ sm: '2xl', md: '3xl' }}
           color="text"
           textAlign="center"
-          textStyle="h1"
+          textStyle="h2"
         >
           Tech skills
         </Heading>

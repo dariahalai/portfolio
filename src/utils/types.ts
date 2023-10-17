@@ -5,3 +5,10 @@ export interface Recomendation {
   position: string;
   text: string;
 }
+export interface ProjectTabPanel {
+  images: string[];
+  description: string;
+  link?: string;
+  project: string;
+  techStack: string;
+}
