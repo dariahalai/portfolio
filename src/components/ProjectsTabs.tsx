@@ -16,13 +16,13 @@ import { PROJECTS_TABS, PROJECTS_TAB_PANELS } from 'utils';
 import { ProjectTabPanel } from 'utils/types';
 
 const ProjectsTabs = () => {
-  const renderItem = (data: any) => {
+  const renderItem = (data: string) => {
     return (
       <Image
         src={data}
         maxW={{ sm: '79vw', md: '50vw', lg: '54vw' }}
         objectFit="cover"
-        alt="main"
+        alt={data}
         borderRadius={16}
       />
     );
@@ -44,10 +44,21 @@ const ProjectsTabs = () => {
             project,
             techStack,
           }: ProjectTabPanel) => (
-            <TabPanel>
-              <Box maxW={{ sm: '79vw', md: '50vw', lg: '54vw' }} mb={6}>
-                <Carousel data={images} func={renderItem} />
-              </Box>
+            <TabPanel key={nanoid()}>
+              {typeof images === 'object' ? (
+                <Box maxW={{ sm: '79vw', md: '50vw', lg: '54vw' }} mb={6}>
+                  <Carousel data={images} func={renderItem} />
+                </Box>
+              ) : (
+                <Image
+                  src={images}
+                  maxW={{ sm: '79vw', md: '50vw', lg: '54vw' }}
+                  objectFit="cover"
+                  alt={images}
+                  borderRadius={16}
+                  mb={4}
+                />
+              )}
               <Heading as="h4" size="xs">
                 Description :
               </Heading>

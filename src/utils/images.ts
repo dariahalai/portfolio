@@ -18,7 +18,7 @@ export const SRMImages = [
   storageSRMImage,
   peopleSRMImage,
 ];
-export const onlineStoreImages = [onlineStoreImage];
+export const onlineStoreImages = onlineStoreImage;
 export const landingPageImages = [
   mainLandImage,
   partnersLandImage,

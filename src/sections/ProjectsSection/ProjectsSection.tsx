@@ -1,5 +1,5 @@
 import { Box, Container, Heading } from '@chakra-ui/layout';
-import { ProjectsAccordion } from 'components';
+import { ProjectsTabs } from 'components';
 
 const ProjectsSection = () => {
   return (
@@ -14,7 +14,7 @@ const ProjectsSection = () => {
         >
           Projects
         </Heading>
-        <ProjectsAccordion />
+        <ProjectsTabs />
       </Container>
     </Box>
   );

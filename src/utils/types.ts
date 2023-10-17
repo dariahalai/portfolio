@@ -6,7 +6,7 @@ export interface Recomendation {
   text: string;
 }
 export interface ProjectTabPanel {
-  images: string[];
+  images: string[] | string;
   description: string;
   link?: string;
   project: string;

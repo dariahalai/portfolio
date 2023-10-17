@@ -1,4 +1,4 @@
 import Carousel from './Carousel';
-import ProjectsAccordion from './ProjectsAccordion';
+import ProjectsTabs from './ProjectsTabs';
 
-export { Carousel, ProjectsAccordion };
+export { Carousel, ProjectsTabs };
