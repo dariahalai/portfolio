@@ -1,16 +1,12 @@
+import { FC } from 'react';
 import Slider from 'react-slick';
 import { useState } from 'react';
-import { Avatar, Box, Heading, IconButton, Text } from '@chakra-ui/react';
-import {
-  SlUserFemale,
-  SlUser,
-  SlArrowLeft,
-  SlArrowRight,
-} from 'react-icons/sl';
-import { RECOMENDATIONS } from 'utils/recomendations';
-import { Recomendation } from 'utils/types';
+import { Box, IconButton } from '@chakra-ui/react';
+import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 
-const Carousel = () => {
+import { nanoid } from 'nanoid';
+
+const Carousel: FC<{ data: any; func: any }> = ({ data, func }) => {
   const [slider, setSlider] = useState<Slider | null>(null);
   const settings = {
     arrows: false,
@@ -21,14 +17,7 @@ const Carousel = () => {
     slidesToScroll: 1,
   };
   return (
-    <Box
-      position={'relative'}
-      maxW={{ sm: '90vw', md: '70vw', lg: '42vw' }}
-      my={20}
-      p={6}
-      borderRadius={16}
-      bg="accentBackground"
-    >
+    <Box position={'relative'}>
       <IconButton
         visibility={{ sm: 'hidden', md: 'visible' }}
         aria-label="left-arrow"
@@ -56,61 +45,11 @@ const Carousel = () => {
         <SlArrowRight size="24px" />
       </IconButton>
       <Slider {...settings} ref={slider => setSlider(slider)}>
-        {RECOMENDATIONS.map(
-          ({ id, gender, name, position, text }: Recomendation) => (
-            <Box key={id}>
-              <Box
-                display="flex"
-                flexDirection="column"
-                alignItems="center"
-                gap={1}
-                mb={10}
-              >
-                <Box
-                  display="flex"
-                  alignItems="center"
-                  justifyContent="center"
-                  boxSize="58px"
-                  borderRadius="50%"
-                  border="2px"
-                  borderColor="black"
-                  bg="cardBackground"
-                  mb={4}
-                >
-                  <Avatar
-                    icon={
-                      gender === 'male' ? (
-                        <SlUser size={32} color="white" />
-                      ) : (
-                        <SlUserFemale size={32} color="white" />
-                      )
-                    }
-                    boxSize={50}
-                    bg="black"
-                    border="2px"
-                    color="black"
-                  />
-                </Box>
-                <Heading as="h4" size="xs" color="text">
-                  {name}
-                </Heading>
-                <Heading as="h4" size="xs" color="text">
-                  {position}
-                </Heading>
-              </Box>
-              <Text
-                size="md"
-                p={4}
-                mx={2}
-                color="text"
-                bg="cardBackground"
-                borderRadius={16}
-              >
-                {text}
-              </Text>
-            </Box>
-          )
-        )}
+        {data.map((el: any) => (
+          <Box as="li" key={nanoid()}>
+            {func(el)}
+          </Box>
+        ))}
       </Slider>
     </Box>
   );

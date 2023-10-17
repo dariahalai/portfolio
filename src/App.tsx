@@ -1,10 +1,16 @@
-import { HeroSection, RecomendationSection, SkillsSection } from 'sections';
+import {
+  HeroSection,
+  ProjectsSection,
+  RecomendationSection,
+  SkillsSection,
+} from 'sections';
 
 const App = () => {
   return (
     <>
       <HeroSection />
       <SkillsSection />
+      <ProjectsSection />
       <RecomendationSection />
     </>
   );
