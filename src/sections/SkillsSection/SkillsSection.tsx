@@ -29,6 +29,7 @@ import {
   Heading,
   Icon,
 } from '@chakra-ui/react';
+import { SECTIONS } from 'utils';
 
 const skillsArray = [
   FaHtml5,
@@ -53,7 +54,7 @@ const skillsArray = [
 
 const SkillsSection = () => {
   return (
-    <Box as="section" py={10} bg="background">
+  <Box as="section" py={10} bg="background" id={SECTIONS.skills}>
       <Container centerContent maxW="xl" my={10}>
         <Heading
           as="h2"
